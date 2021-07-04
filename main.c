@@ -320,36 +320,32 @@ float leeraxis(uint8_t eje )
 	uint8_t  ax;
 		float axis;
 
-	uint8_t buff [1];
+	uint8_t buff;
 
 		
 	if (eje == 0){
 	I2Cdev -> MasterTransmit(ACC_ADR_W, &eje, 1, true);
 	while(I2Cdev -> GetStatus().busy);
 	
-	I2Cdev -> MasterReceive(ACC_ADR_W, buff, 1, false);
+	I2Cdev -> MasterReceive(ACC_ADR_W, &buff, 1, false);
 	while(I2Cdev -> GetStatus().busy);
 	}
 	else if (eje == 1){
 	I2Cdev -> MasterTransmit(ACC_ADR_W,&eje, 1, true);
 	while(I2Cdev -> GetStatus().busy);
 	
-	I2Cdev -> MasterReceive(ACC_ADR_W, buff, 1, false);
+	I2Cdev -> MasterReceive(ACC_ADR_W, &buff, 1, false);
 	while(I2Cdev -> GetStatus().busy);
 	}
 	else{
 	I2Cdev -> MasterTransmit(ACC_ADR_W, &eje, 1, true);
 	while(I2Cdev -> GetStatus().busy);
 	
-	I2Cdev -> MasterReceive(ACC_ADR_W, buff, 1, false);
+	I2Cdev -> MasterReceive(ACC_ADR_W, &buff, 1, false);
 	while(I2Cdev -> GetStatus().busy);
 	}
-	ax = (buf [0]<<2)/4; 
 	
-	if ( ax & (1 << 5) )
-		axis = -((~ax)+1);
-	else
-		axis = ((char)(ax));
+		axis = ((char)(buff));
 	
 	return axis;
 }

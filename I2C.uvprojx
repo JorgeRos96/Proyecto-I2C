@@ -397,6 +397,46 @@
               <FileType>1</FileType>
               <FilePath>.\stm32f4xx_it.c</FilePath>
             </File>
+            <File>
+              <FileName>sensor_temp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\sensor_temp.c</FilePath>
+            </File>
+            <File>
+              <FileName>sensor_temp.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\sensor_temp.h</FilePath>
+            </File>
+            <File>
+              <FileName>sensor_acc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\sensor_acc.c</FilePath>
+            </File>
+            <File>
+              <FileName>sensor_acc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\sensor_acc.h</FilePath>
+            </File>
+            <File>
+              <FileName>Delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>Delay.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Delay.h</FilePath>
+            </File>
+            <File>
+              <FileName>USART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USART.c</FilePath>
+            </File>
+            <File>
+              <FileName>USART.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\USART.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -420,6 +460,12 @@
           <targetInfo name="Target 1"/>
         </targetInfos>
       </api>
+      <api Capiversion="2.4.0" Cclass="CMSIS Driver" Cgroup="USART" exclusive="0">
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
+        <targetInfos>
+          <targetInfo name="Target 1"/>
+        </targetInfos>
+      </api>
       <api Capiversion="1.0.0" Cclass="Device" Cgroup="STM32Cube Framework" exclusive="1">
         <package name="STM32F4xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
         <targetInfos>
@@ -435,6 +481,12 @@
         </targetInfos>
       </component>
       <component Capiversion="2.2" Cclass="CMSIS Driver" Cgroup="I2C" Cvendor="Keil" Cversion="2.10" condition="STM32F4 CMSIS_Driver I2C">
+        <package name="STM32F4xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <targetInfos>
+          <targetInfo name="Target 1"/>
+        </targetInfos>
+      </component>
+      <component Capiversion="2.1" Cclass="CMSIS Driver" Cgroup="USART" Cvendor="Keil" Cversion="2.13" condition="STM32F4 CMSIS_Driver USART">
         <package name="STM32F4xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
         <targetInfos>
           <targetInfo name="Target 1"/>
@@ -477,6 +529,12 @@
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RCC" Cvendor="Keil" Cversion="1.7.9" condition="STM32F4 HAL GPIO">
+        <package name="STM32F4xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <targetInfos>
+          <targetInfo name="Target 1"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="TIM" Cvendor="Keil" Cversion="1.7.9" condition="STM32F4 HAL DMA">
         <package name="STM32F4xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
         <targetInfos>
           <targetInfo name="Target 1"/>

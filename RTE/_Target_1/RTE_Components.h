@@ -20,6 +20,17 @@
 #define RTE_Drivers_I2C1                /* Driver I2C1 */
         #define RTE_Drivers_I2C2                /* Driver I2C2 */
         #define RTE_Drivers_I2C3                /* Driver I2C3 */
+/*  Keil::CMSIS Driver:USART:2.13 */
+#define RTE_Drivers_USART1              /* Driver USART1 */
+        #define RTE_Drivers_USART2              /* Driver USART2 */
+        #define RTE_Drivers_USART3              /* Driver USART3 */
+        #define RTE_Drivers_USART4              /* Driver USART4 */
+        #define RTE_Drivers_USART5              /* Driver USART5 */
+        #define RTE_Drivers_USART6              /* Driver USART6 */
+        #define RTE_Drivers_USART7              /* Driver USART7 */
+        #define RTE_Drivers_USART8              /* Driver USART8 */
+        #define RTE_Drivers_USART9              /* Driver USART9 */
+        #define RTE_Drivers_USART10             /* Driver USART10 */
 /*  Keil::Device:STM32Cube Framework:Classic:1.7.9 */
 #define RTE_DEVICE_FRAMEWORK_CLASSIC
 /*  Keil::Device:STM32Cube HAL:Common:1.7.9 */
@@ -34,6 +45,8 @@
 #define RTE_DEVICE_HAL_PWR
 /*  Keil::Device:STM32Cube HAL:RCC:1.7.9 */
 #define RTE_DEVICE_HAL_RCC
+/*  Keil::Device:STM32Cube HAL:TIM:1.7.9 */
+#define RTE_DEVICE_HAL_TIM
 /*  Keil::Device:Startup:2.6.3 */
 #define RTE_DEVICE_STARTUP_STM32F4XX    /* Device Startup for STM32F4 */
 

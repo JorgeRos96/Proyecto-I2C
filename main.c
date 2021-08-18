@@ -38,6 +38,7 @@
 #include "sensor_acc.h"
 #include "Delay.h"
 #include "USART.h"
+#include "Watchdog.h"
 
 #include <string.h>
 #ifdef _RTE_
@@ -64,7 +65,10 @@ static void Error_Handler(int fallo);
   */
 int main(void)
 {
-  
+  /*Inicialización del IWDG*/
+	if (init_Watchdog() != 0)
+			Error_Handler(5);
+	
   /* STM32F7xx HAL library initialization:
        - Configure the Flash ART accelerator on ITCM interface
        - Configure the Systick to generate an interrupt each 1 msec
@@ -136,7 +140,8 @@ int main(void)
 		/* Envío del array al terminal a traves de la función tx_USART de la librería USART*/
 		if (tx_USART(buf, size) != 0)
 		Error_Handler(3);
-		Delay_ms(2000);
+		Delay_ms(1000);
+		reset_Watchdog();
   }
 }
 

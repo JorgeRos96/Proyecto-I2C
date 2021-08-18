@@ -21,39 +21,28 @@ Dialog DLL:      TCM.DLL V1.36.2.0
  
 <h2>Project:</h2>
 C:\Users\User\Documents\PFG\Proyectos finales\I2C\I2C.uvprojx
-Project File Date:  07/26/2021
+Project File Date:  08/18/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Rebuild target 'Target 1'
 compiling USART.c...
+compiling sensor_temp.c...
+sensor_temp.h(3): warning:  #1295-D: Deprecated declaration initI2c - give arg types
+  void initI2c();
+sensor_temp.h(4): warning:  #1-D: last line of file ends without a newline
+  float leerTemperatura();
+sensor_temp.h(4): warning:  #1295-D: Deprecated declaration leerTemperatura - give arg types
+  float leerTemperatura();
+sensor_temp.c(39): warning:  #1295-D: Deprecated declaration initI2c - give arg types
+  void initI2c();
+sensor_temp.c(40): warning:  #1295-D: Deprecated declaration leerTemperatura - give arg types
+  float leerTemperatura();
+sensor_temp.c: 5 warnings, 0 errors
 compiling stm32f4xx_hal_msp.c...
 stm32f4xx_hal_msp.c(101): warning:  #177-D: variable "GPIO_InitStruct"  was declared but never referenced
   	 GPIO_InitTypeDef GPIO_InitStruct = {0};
 stm32f4xx_hal_msp.c: 1 warning, 0 errors
-compiling sensor_acc.c...
-sensor_acc.h(3): warning:  #1295-D: Deprecated declaration I2C_init - give arg types
-  void I2C_init();
-sensor_acc.h(4): warning:  #1295-D: Deprecated declaration init_acc - give arg types
-  void init_acc();
-sensor_acc.h(5): warning:  #1-D: last line of file ends without a newline
-  float leeraxis(uint8_t eje );
-sensor_acc.c(35): warning:  #1295-D: Deprecated declaration initI2c - give arg types
-  void initI2c();
-sensor_acc.c(36): warning:  #1295-D: Deprecated declaration init_acc - give arg types
-  void init_acc();
-sensor_acc.c(128): warning:  #1-D: last line of file ends without a newline
-  }
-sensor_acc.c: 6 warnings, 0 errors
-compiling Delay.c...
-Delay.c(38): warning:  #177-D: variable "sConfigOC"  was declared but never referenced
-  		TIM_OC_InitTypeDef sConfigOC = {0};
-Delay.c(39): warning:  #177-D: variable "sBreakDeadTimeConfig"  was declared but never referenced
-  		TIM_BreakDeadTimeConfigTypeDef sBreakDeadTimeConfig = {0};
-Delay.c(86): warning:  #1-D: last line of file ends without a newline
-  	}
-Delay.c: 3 warnings, 0 errors
-compiling stm32f4xx_it.c...
 compiling main.c...
 sensor_temp.h(3): warning:  #1295-D: Deprecated declaration initI2c - give arg types
   void initI2c();
@@ -69,37 +58,61 @@ sensor_acc.h(5): warning:  #1-D: last line of file ends without a newline
   float leeraxis(uint8_t eje );
 Delay.h(17): warning:  #1-D: last line of file ends without a newline
   void Delay_ms (uint16_t ms);
-main.c: 7 warnings, 0 errors
-compiling sensor_temp.c...
-sensor_temp.h(3): warning:  #1295-D: Deprecated declaration initI2c - give arg types
+Watchdog.h(3): warning:  #1295-D: Deprecated declaration init_Watchdog - give arg types
+  int init_Watchdog ();
+Watchdog.h(4): warning:  #1295-D: Deprecated declaration reset_Watchdog - give arg types
+  void reset_Watchdog ();
+main.c: 9 warnings, 0 errors
+compiling Delay.c...
+Delay.c(38): warning:  #177-D: variable "sConfigOC"  was declared but never referenced
+  		TIM_OC_InitTypeDef sConfigOC = {0};
+Delay.c(39): warning:  #177-D: variable "sBreakDeadTimeConfig"  was declared but never referenced
+  		TIM_BreakDeadTimeConfigTypeDef sBreakDeadTimeConfig = {0};
+Delay.c(86): warning:  #1-D: last line of file ends without a newline
+  	}
+Delay.c: 3 warnings, 0 errors
+compiling sensor_acc.c...
+sensor_acc.h(3): warning:  #1295-D: Deprecated declaration I2C_init - give arg types
+  void I2C_init();
+sensor_acc.h(4): warning:  #1295-D: Deprecated declaration init_acc - give arg types
+  void init_acc();
+sensor_acc.h(5): warning:  #1-D: last line of file ends without a newline
+  float leeraxis(uint8_t eje );
+sensor_acc.c(35): warning:  #1295-D: Deprecated declaration initI2c - give arg types
   void initI2c();
-sensor_temp.h(4): warning:  #1-D: last line of file ends without a newline
-  float leerTemperatura();
-sensor_temp.h(4): warning:  #1295-D: Deprecated declaration leerTemperatura - give arg types
-  float leerTemperatura();
-sensor_temp.c(39): warning:  #1295-D: Deprecated declaration initI2c - give arg types
-  void initI2c();
-sensor_temp.c(40): warning:  #1295-D: Deprecated declaration leerTemperatura - give arg types
-  float leerTemperatura();
-sensor_temp.c: 5 warnings, 0 errors
+sensor_acc.c(36): warning:  #1295-D: Deprecated declaration init_acc - give arg types
+  void init_acc();
+sensor_acc.c(128): warning:  #1-D: last line of file ends without a newline
+  }
+sensor_acc.c: 6 warnings, 0 errors
+compiling stm32f4xx_it.c...
+compiling Watchdog.c...
+Watchdog.h(3): warning:  #1295-D: Deprecated declaration init_Watchdog - give arg types
+  int init_Watchdog ();
+Watchdog.h(4): warning:  #1295-D: Deprecated declaration reset_Watchdog - give arg types
+  void reset_Watchdog ();
+Watchdog.c(60): warning:  #1-D: last line of file ends without a newline
+  }
+Watchdog.c: 3 warnings, 0 errors
+compiling stm32f4xx_hal.c...
 compiling stm32f4xx_hal_cortex.c...
-compiling I2C_STM32F4xx.c...
 compiling stm32f4xx_hal_dma.c...
 compiling stm32f4xx_hal_dma_ex.c...
-compiling stm32f4xx_hal.c...
+compiling I2C_STM32F4xx.c...
 compiling USART_STM32F4xx.c...
 compiling stm32f4xx_hal_gpio.c...
 assembling startup_stm32f429xx.s...
-compiling system_stm32f4xx.c...
-compiling stm32f4xx_hal_pwr_ex.c...
-compiling stm32f4xx_hal_tim_ex.c...
 compiling stm32f4xx_hal_pwr.c...
-compiling stm32f4xx_hal_rcc.c...
+compiling stm32f4xx_hal_pwr_ex.c...
 compiling stm32f4xx_hal_rcc_ex.c...
+compiling stm32f4xx_hal_rcc.c...
 compiling stm32f4xx_hal_tim.c...
+compiling system_stm32f4xx.c...
+compiling stm32f4xx_hal_tim_ex.c...
+compiling stm32f4xx_hal_iwdg.c...
 linking...
-Program Size: Code=29928 RO-data=1300 RW-data=60 ZI-data=2148  
-".\Objects\I2C.axf" - 0 Error(s), 22 Warning(s).
+Program Size: Code=30100 RO-data=1300 RW-data=60 ZI-data=2156  
+".\Objects\I2C.axf" - 0 Error(s), 27 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -123,6 +136,7 @@ Package Vendor: Keil
    * Component: Cortex Version: 1.7.9
    * Component: DMA Version: 1.7.9
    * Component: GPIO Version: 1.7.9
+   * Component: IWDG Version: 1.7.9
    * Component: PWR Version: 1.7.9
    * Component: RCC Version: 1.7.9
    * Component: TIM Version: 1.7.9
@@ -155,15 +169,15 @@ Package Vendor: Keil
       Source file:   CMSIS\Driver\USART_STM32F4xx.c
 
    * Component: Keil::Device:STM32Cube Framework:Classic:1.7.9
-      Source file:   MDK\Templates\Src\main.c
-      Source file:   MDK\Templates\Src\stm32f4xx_it.c
+      Include file:  CMSIS\Driver\Config\RTE_Device.h
       Source file:   MDK\Templates\Src\stm32f4xx_hal_msp.c
       Include file:  MDK\Templates\Inc\stm32f4xx_hal_conf.h
-      Include file:  MDK\Templates_LL\Inc\main.h
+      Source file:   MDK\Templates\Src\stm32f4xx_it.c
       Include file:  MDK\Templates\Inc\main.h
-      Source file:   MDK\Templates_LL\Src\main.c
-      Include file:  CMSIS\Driver\Config\RTE_Device.h
       Include file:  MDK\Templates\Inc\stm32f4xx_it.h
+      Source file:   MDK\Templates_LL\Src\main.c
+      Source file:   MDK\Templates\Src\main.c
+      Include file:  MDK\Templates_LL\Inc\main.h
 
    * Component: Keil::Device:STM32Cube HAL:Common:1.7.9
       Include file:  Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
@@ -179,6 +193,9 @@ Package Vendor: Keil
    * Component: Keil::Device:STM32Cube HAL:GPIO:1.7.9
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c
 
+   * Component: Keil::Device:STM32Cube HAL:IWDG:1.7.9
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_iwdg.c
+
    * Component: Keil::Device:STM32Cube HAL:PWR:1.7.9
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c
@@ -188,16 +205,16 @@ Package Vendor: Keil
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c
 
    * Component: Keil::Device:STM32Cube HAL:TIM:1.7.9
-      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c
 
    * Component: Keil::Device:Startup:2.6.3
-      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
-      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
-      Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
-      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
-Build Time Elapsed:  00:00:53
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
+      Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+Build Time Elapsed:  00:00:39
 </pre>
 </body>
 </html>

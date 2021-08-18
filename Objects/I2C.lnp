@@ -6,6 +6,7 @@
 ".\objects\sensor_acc.o"
 ".\objects\delay.o"
 ".\objects\usart.o"
+".\objects\watchdog.o"
 ".\objects\i2c_stm32f4xx.o"
 ".\objects\usart_stm32f4xx.o"
 ".\objects\stm32f4xx_hal.o"
@@ -17,10 +18,11 @@
 ".\objects\stm32f4xx_hal_pwr_ex.o"
 ".\objects\stm32f4xx_hal_rcc.o"
 ".\objects\stm32f4xx_hal_rcc_ex.o"
-".\objects\startup_stm32f429xx.o"
-".\objects\system_stm32f4xx.o"
 ".\objects\stm32f4xx_hal_tim.o"
 ".\objects\stm32f4xx_hal_tim_ex.o"
+".\objects\startup_stm32f429xx.o"
+".\objects\system_stm32f4xx.o"
+".\objects\stm32f4xx_hal_iwdg.o"
 --ro-base 0x08000000 --entry 0x08000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\Listings\I2C.map" -o .\Objects\I2C.axf
